@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="style1.css">
+    <title>Noise Dectector with Automatic Recording System</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="#components">Components</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#circuit">Circuit</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#working-1">Working</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#code">Code</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <section class="header-sec">
+        <h1 class="header-title">Noise Dectector with Automatic Recording System</h1><br>
+        
+      
+
+      <section class="feature-sec">
+        <h3>Introduction</h3>
+        <p>The growing significance of noise monitoring in various domains, from security to environmental 
+          analysis, necessitates advanced systems that go beyond conventional detection methods. This 
+          project introduces a "Noise Detector with Automatic Recording System" that addresses the 
+          limitations of traditional noise monitoring by combining Arduino-based hardware, sophisticated 
+          sensors, and cloud integration. In an era of IoT advancements and connected devices, the 
+          integration of the Blynk app further enhances the project's functionality, allowing users to remotely 
+          monitor and control the system.</p>
+      </section>
+      </section>
+    
+
+      <section id="components" class="colored-section centered-section">
+         <h2 class="component-header">Components Used</h2>
+        <div id="carouselExampleControls" class="carousel slide " data-bs-ride="false" >
+            <div class="carousel-inner">
+              <div class="carousel-item active ">
+                <div class="row">
+                <div class="in-one-carousel col-md-4">
+                <img class="opinion-img" src="esp32wroom.jpg" alt="" width="100" height="100">
+                <h5>ESP32 WROOM</h5>
+               </div>
+               <div class="in-one-carousel col-md-4">
+                <img class="opinion-img" src="Sound.jpg" alt="" width="100" height="100">
+                <h5>Sound-Sensor</h5>
+               </div>
+               <div class="in-one-carousel col-md-4">
+                <img class="opinion-img" src="max4466.jpg" alt="" width="100" height="100">
+                <h5>Max4466</h5>
+               </div>
+               </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" ></span>
+              
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" ></span>
+              
+            </button>
+          </div>
+    </section>
+  <section class="bg">
+<div class="explaination-box">
+    <section class="circuit-diagram" id="circuit">
+        <br><br>
+        <h3 style="margin-bottom: 2.5%;">Implementation</h3><br>
+        <div >
+                <img class="circuit"src="circute.png" alt="" width="50%"  style="margin-left: 400px;">
+        </div>
+        
+        <br><br>
+       <p class="Explaination">
+        <p>STEP 1 : Gather Components:Obtain an ESP32 development board.Acquire a MAX4466 microphone module.Ensure you have the necessary sensors and modules for additional features (e.g., sound sensor, SD card module) </p>
+        
+        <p>STEP 2: Set Up Arduino IDE:Install the Arduino IDE and set up the ESP32 board support.Install required libraries, including those for the MAX4466 and any additional sensors.</p>
+
+        <p>STEP 3:  Connect Components:Wire the MAX4466 microphone module to the ESP32 following the pin connections outlined in the MAX4466 datasheet.Connect other sensors or modules as needed (e.g., sound sensor, SD card module)</p>
+
+       <p>STEP 4: Write ESP32 Code:Develop Arduino code to read data from the MAX4466 microphone and any additional sensors.Implement Wi-Fi connectivity for the ESP32 to communicate with the chosen cloud platform (e.g., ThingSpeak, Blynk).</p>
+
+        <p>STEP 5: Cloud Configuration:Create an account on the selected cloud platform.Set up a project or channel to receive and store data.</p>
+      </p>
+        
+        
+
+    </section>
+
+    <section class="blynk-setup">
+        <h3 style="margin-bottom: 2%;">Set up Blynk App for the project</h3>
+       
+       <p>Blynk is a popular Internet of Things (IoT) platform that enables users to build and control IoT projects easily. It simplifies the process of creating connected devices by providing a user-friendly interface and a powerful cloud infrastructure. Blynk supports a variety of hardware platforms and communication protocols, making it versatile and widely used in the maker and IoT community</p> 
+       <br>
+       <p>Steps to follow in blynk:</p>
+       <ul>
+        <li>Install the blynk app from https://blynk.io/</li>
+        <li>Create a new project</li>
+        <li>Enter the authentication code sent in the code in IDE</li>
+        <li>Add terminal and select PIN as V10</li>
+        <li>Run the project</li>
+       </ul><br>
+
+    <div id="working-1">
+        <h2>Working</h2><br>
+        <p>The "Noise Detector with Automatic Recording System" utilizes the ESP32 microcontroller and MAX4466 microphone module to create an efficient noise monitoring solution. Leveraging the ESP32's built-in Wi-Fi capabilities, the system seamlessly connects to a cloud service for data storage. The MAX4466 microphone ensures accurate audio capture, while the ESP32 processes the data and communicates with the chosen cloud platform. The project offers a versatile solution for real-time noise monitoring and recording, with the flexibility to scale across various applications.</p>
+         <br>
+         <img src="prac.jpg" alt="" height="40%" width="40%" class="final-pic">
+
+    </div>
+    <br>
+   
+</div>
+
+<br>
+</section>
+
+
+  <footer id="footer"  class=" white-section similar-section centered-section">
+
+    <p class="neglected-para">© smart street lighting system @2023</p>
+
+  </footer>
+</body>
+</html>
